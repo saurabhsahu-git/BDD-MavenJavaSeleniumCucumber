@@ -1,7 +1,8 @@
 Feature: Login to Application
 
-@Execute
 Scenario: Test to validate user is able to login to the application
+
+@Execute
 Scenario Outline: Test to validate Username text field is mandatory
 	Given User is in Home Page
 	When User Navigates to login page

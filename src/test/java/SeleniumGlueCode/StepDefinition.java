@@ -1,5 +1,11 @@
 package SeleniumGlueCode;
 
+import java.sql.Connection;
+import java.sql.Driver;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.Statement;
+import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
@@ -49,6 +55,18 @@ public class StepDefinition {
 	public void validate_Login_Error_message_displayed() throws Throwable {
 	    // Write code here that turns the phrase above into concrete actions
 	   
+	}
+	
+	@Given("^DB is connected$")
+	public void db_is_connected() throws Throwable {
+	    Driver myDriver = new oracle.jdbc.driver.OracleDriver();
+		DriverManager.registerDriver( myDriver );
+		Properties Info = new Properties();
+		Info.put( "user", "xe" );
+		Info.put( "password", "xe" );
+		Connection conn = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe",Info);
+		System.out.println("DB Schema : "+conn.getSchema());
+		conn.close();
 	}
 
 }
