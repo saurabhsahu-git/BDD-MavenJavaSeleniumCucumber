@@ -39,7 +39,6 @@
 		<ul id='slide-out' class='side-nav fixed hide-on-med-and-down'>
 			<li class='waves-effect active'><a href='#!' view='test-view' onclick="configureView(0);chartsView('test');"><i class='material-icons'>dashboard</i></a></li>
 						<li class='waves-effect'><a href='#!' view='category-view' onclick="configureView(1)"><i class='material-icons'>label_outline</i></a></li>
-			<li class='waves-effect'><a href='#!' view='exception-view' onclick="configureView(2)"><i class='material-icons'>bug_report</i></a></li>
 			<li class='waves-effect'><a href='#!' onclick="configureView(-1);chartsView('dashboard');" view='dashboard-view'><i class='material-icons'>track_changes</i></i></a></li>
 		</ul>
 
@@ -53,7 +52,7 @@
 		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
 			<li>
                 <a href='#!'>
-                    <span class='label suite-start-time blue darken-3'>Mar 7, 2021 12:37:33 AM</span>
+                    <span class='label suite-start-time blue darken-3'>Mar 7, 2021 08:54:08 AM</span>
 				</a>
 			</li>
 			<li>
@@ -79,8 +78,6 @@
 				</a>
 				<ul id='tests-toggle' class='dropdown-content'>
 											<li status='pass'><a href='#!'>Pass <i class='material-icons green-text'>check_circle</i></a></li>
-						<li status='fail'><a href='#!'>Fail <i class='material-icons red-text'>cancel</i></a></li>
-						<li status='skip'><a href='#!'>Skip <i class='material-icons cyan-text'>redo</i></a></li>
 					<li class='divider'></li>
 					<li status='clear' clear='true'><a href='#!'>Clear Filters <i class='material-icons'>clear</i></a></li>
 				</ul>
@@ -94,6 +91,7 @@
 				</a>
 				<ul id='category-toggle' class='dropdown-content'>
 					<li><a href='#'>@API</a></li>
+					<li><a href='#'>@Error</a></li>
 					<li class='divider'></li>
 					<li class='clear'><a href='#!' clear='true'>Clear Filters</a></li>
 				</ul>
@@ -141,10 +139,10 @@
 					<canvas id='parent-analysis' width='100' height='80'></canvas>
 				</div>
 				<div class='block text-small'>
-					<span class='tooltipped' data-position='top' data-tooltip='0%'><span class='strong'>0</span> feature(s) passed</span>
+					<span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>1</span> feature(s) passed</span>
 				</div>
 				<div class='block text-small'>
-					<span class='strong tooltipped' data-position='top' data-tooltip='100%'>1</span> feature(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+					<span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> feature(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
 				</div>
 			</div>
 		</div>
@@ -156,10 +154,10 @@
 					<canvas id='child-analysis' width='100' height='80'></canvas>
 				</div>
 				<div class='block text-small'>
-					<span class='tooltipped' data-position='top' data-tooltip='83.333%'><span class='strong'>5</span> scenario(s) passed</span>
+					<span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>6</span> scenario(s) passed</span>
 				</div>
 				<div class='block text-small'>
-					<span class='strong tooltipped' data-position='top' data-tooltip='16.667%'>1</span> scenario(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+					<span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> scenario(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
 				</div>
 			</div>
 		</div>
@@ -171,10 +169,10 @@
 					<canvas id='grandchild-analysis' width='100' height='80'></canvas>
 				</div>
 				<div class='block text-small'>
-					<span class='tooltipped' data-position='top' data-tooltip='88.889%'><span class='strong'>16</span> step(s) passed</span>
+					<span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>18</span> step(s) passed</span>
 				</div>
 				<div class='block text-small'>
-					<span class='strong tooltipped' data-position='top' data-tooltip='5.556%'>1</span> step(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='5.556%'>1</span> others
+					<span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> step(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
 				</div>
 			</div>
 		</div>
@@ -188,18 +186,18 @@
 			<ul id='test-collection' class='test-collection'>
 				
 				
-				<li class='test displayed active has-leaf fail' status='fail' bdd='true' test-id='1'>
+				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='1'>
 					<div class='test-heading'>
 						<span class='test-name'>Rest Assured APIs</span>
-						<span class='test-time'>Mar 7, 2021 12:37:33 AM</span>
-						<span class='test-status right fail'>fail</span>
+						<span class='test-time'>Mar 7, 2021 08:54:08 AM</span>
+						<span class='test-status right pass'>pass</span>
 					</div>
 					<div class='test-content hide'>
 <div class='scenario node' test-id='2' status='pass'>
 	<div class='category-list'>
 		<span class='category label white-text'>@API</span>
 	</div>
-	<span class='duration right label'>0h 0m 1s+331ms</span>
+	<span class='duration right label'>0h 0m 1s+458ms</span>
 	<div class='desc'>
 		<b>Scenario</b>
 		<span class="desc-text">To Test Rest Assured 	GET List Users API</span>
@@ -231,11 +229,12 @@
 		</li>
 	</ul>
 </div>
-<div class='scenario node' test-id='6' status='fail'>
+<div class='scenario node' test-id='6' status='pass'>
 	<div class='category-list'>
 		<span class='category label white-text'>@API</span>
+		<span class='category label white-text'>@Error</span>
 	</div>
-	<span class='duration right label'>0h 0m 0s+468ms</span>
+	<span class='duration right label'>0h 0m 0s+57ms</span>
 	<div class='desc'>
 		<b>Scenario</b>
 		<span class="desc-text">To Test Rest Assured 	GET Single User API</span>
@@ -249,25 +248,20 @@
 				<div class='pre'>passed</div>
 			
 		</li>
-		<li test-id='8' class='node then fail' status='fail'>
+		<li test-id='8' class='node then pass' status='pass'>
 			
 			<b>Then</b>
 			
 			<span class="bdd-step-name">Then Validating Response code is "200"</span>
-				<div class='pre'><pre>java.lang.AssertionError: Response code is not 200. Hence, failing
-	at org.junit.Assert.fail(Assert.java:88)
-	at org.junit.Assert.assertTrue(Assert.java:41)
-	at SeleniumGlueCode.RestAssuredDefinition.validating_Response_code_is(RestAssuredDefinition.java:38)
-	at ✽.Then Validating Response code is "200"(RestAssuredTest.feature:12)
-</pre></div>
+				<div class='pre'>passed</div>
 			
 		</li>
-		<li test-id='9' class='node then skip' status='skip'>
+		<li test-id='9' class='node then pass' status='pass'>
 			
 			<b>Then</b>
 			
 			<span class="bdd-step-name">Then printing Response Body on console</span>
-				<div class='pre'>skipped</div>
+				<div class='pre'>passed</div>
 			
 		</li>
 	</ul>
@@ -276,7 +270,7 @@
 	<div class='category-list'>
 		<span class='category label white-text'>@API</span>
 	</div>
-	<span class='duration right label'>0h 0m 0s+378ms</span>
+	<span class='duration right label'>0h 0m 0s+497ms</span>
 	<div class='desc'>
 		<b>Scenario</b>
 		<span class="desc-text">To Test Create Rest Assured POST API</span>
@@ -312,7 +306,7 @@
 	<div class='category-list'>
 		<span class='category label white-text'>@API</span>
 	</div>
-	<span class='duration right label'>0h 0m 0s+770ms</span>
+	<span class='duration right label'>0h 0m 0s+837ms</span>
 	<div class='desc'>
 		<b>Scenario</b>
 		<span class="desc-text">To Print each Response Attribute Value in Create API</span>
@@ -348,7 +342,7 @@
 	<div class='category-list'>
 		<span class='category label white-text'>@API</span>
 	</div>
-	<span class='duration right label'>0h 0m 0s+389ms</span>
+	<span class='duration right label'>0h 0m 0s+226ms</span>
 	<div class='desc'>
 		<b>Scenario</b>
 		<span class="desc-text">To Print each Response Attribute Value in Create API</span>
@@ -384,7 +378,7 @@
 	<div class='category-list'>
 		<span class='category label white-text'>@API</span>
 	</div>
-	<span class='duration right label'>0h 0m 0s+380ms</span>
+	<span class='duration right label'>0h 0m 0s+406ms</span>
 	<div class='desc'>
 		<b>Scenario</b>
 		<span class="desc-text">To Print each Response Attribute Value in Create API</span>
@@ -472,14 +466,13 @@
 					<div class='category-heading'>
 						<span class='category-name'>@API</span>
 						<span class='category-status right'>
-							<span class='label pass'>5</span>
-							<span class='label fail'>1</span>
+							<span class='label pass'>6</span>
 						</span>
 					</div>
 					<div class='category-content hide'>
 						<div class='category-status-counts'>
-							<span class='label green accent-4 white-text'>Passed: 5</span>
-							<span class='label red lighten-1 white-text'>Failed: 1</span>
+							<span class='label green accent-4 white-text'>Passed: 6</span>
+							
 							
 						</div>
 					
@@ -494,33 +487,67 @@
 								</thead>
 								<tbody>
 									<tr>
-										<td>Mar 7, 2021 12:37:33 AM</td>
+										<td>Mar 7, 2021 08:54:08 AM</td>
 										<td class='linked' test-id='2'>Rest Assured APIs.To Test Rest Assured 	GET List Users API</td>
 										<td><span class='test-status pass'>pass</span></td>
 									</tr>
 									<tr>
-										<td>Mar 7, 2021 12:37:34 AM</td>
+										<td>Mar 7, 2021 08:54:09 AM</td>
 										<td class='linked' test-id='6'>Rest Assured APIs.To Test Rest Assured 	GET Single User API</td>
-										<td><span class='test-status fail'>fail</span></td>
+										<td><span class='test-status pass'>pass</span></td>
 									</tr>
 									<tr>
-										<td>Mar 7, 2021 12:37:35 AM</td>
+										<td>Mar 7, 2021 08:54:10 AM</td>
 										<td class='linked' test-id='10'>Rest Assured APIs.To Test Create Rest Assured POST API</td>
 										<td><span class='test-status pass'>pass</span></td>
 									</tr>
 									<tr>
-										<td>Mar 7, 2021 12:37:35 AM</td>
+										<td>Mar 7, 2021 08:54:10 AM</td>
 										<td class='linked' test-id='14'>Rest Assured APIs.To Print each Response Attribute Value in Create API</td>
 										<td><span class='test-status pass'>pass</span></td>
 									</tr>
 									<tr>
-										<td>Mar 7, 2021 12:37:36 AM</td>
+										<td>Mar 7, 2021 08:54:11 AM</td>
 										<td class='linked' test-id='18'>Rest Assured APIs.To Print each Response Attribute Value in Create API</td>
 										<td><span class='test-status pass'>pass</span></td>
 									</tr>
 									<tr>
-										<td>Mar 7, 2021 12:37:36 AM</td>
+										<td>Mar 7, 2021 08:54:11 AM</td>
 										<td class='linked' test-id='22'>Rest Assured APIs.To Print each Response Attribute Value in Create API</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@Error</span>
+						<span class='category-status right'>
+							<span class='label pass'>1</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span class='label green accent-4 white-text'>Passed: 1</span>
+							
+							
+						</div>
+					
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Mar 7, 2021 08:54:09 AM</td>
+										<td class='linked' test-id='6'>Rest Assured APIs.To Test Rest Assured 	GET Single User API</td>
 										<td><span class='test-status pass'>pass</span></td>
 									</tr>
 								</tbody>
@@ -540,72 +567,6 @@
 	</div>
 </div>
 <!-- category view -->
-<div id='exception-view' class='view hide'>
-
-    <section id='controls'>
-        <div class='controls grey lighten-4'>
-            <!-- search -->
-            <div class='chip transparent' alt='Search Tests' title='Search Tests'>
-                <a href="#" class='search-div'>
-                    <i class='material-icons'>search</i> Search
-                </a>
-
-                <div class='input-field left hide'>
-                    <input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
-                </div>
-
-            </div>
-            <!-- search -->
-        </div>
-    </section>
-
-    <div class='subview-left left'>
-
-        <div class='view-summary'>
-            <h5>Exceptions</h3>
-                <ul id='exception-collection' class='exception-collection'>
-
-                        <li class='exception displayed active'>
-                            <div class='exception-heading'>
-                                <span class='exception-name'>java.lang.AssertionError</span>
-                                <span class='exception-count right'><span class='label red lighten-1 white-text'>1</span></span>
-                            </div>
-                            <div class='exception-content hide'>
-                                <div class='exception-tests'>
-                                    <table class='bordered table-results'>
-                                        <thead>
-                                        <tr>
-                                            <th>Timestamp</th>
-                                            <th>TestName</th>
-                                            <th>Status</th>
-                                        </tr>
-                                        </thead>
-                                        <tbody>
-                                                    <tr>
-                                                        <td>Mar 7, 2021 12:37:35 AM</td>
-                                                        <td class='linked' test-id='8'>Rest Assured APIs.To Test Rest Assured 	GET Single User API.Then Validating Response code is "200"</td>
-                                                        <td><pre><pre>java.lang.AssertionError: Response code is not 200. Hence, failing
-	at org.junit.Assert.fail(Assert.java:88)
-	at org.junit.Assert.assertTrue(Assert.java:41)
-	at SeleniumGlueCode.RestAssuredDefinition.validating_Response_code_is(RestAssuredDefinition.java:38)
-	at ✽.Then Validating Response code is "200"(RestAssuredTest.feature:12)
-</pre></pre></td>
-                                                    </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-                        </li>
-                </ul>
-        </div>
-    </div>
-
-    <div class='subview-right left'>
-        <div class='view-summary'>
-            <h5 class='exception-name'></h5>
-        </div>
-    </div>
-</div>
 <!-- exception view -->
 <div id='dashboard-view' class='view hide'>
 	<div class='card-panel transparent np-v'>
@@ -633,19 +594,19 @@
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Start
-					<div class='panel-lead'>Mar 7, 2021 12:37:33 AM</div>
+					<div class='panel-lead'>Mar 7, 2021 08:54:08 AM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 			 		End
-			 		<div class='panel-lead'>Mar 7, 2021 12:37:37 AM</div>
+			 		<div class='panel-lead'>Mar 7, 2021 08:54:12 AM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Time Taken
-					<div class='panel-lead'>3,828ms</div>
+					<div class='panel-lead'>3,611ms</div>
 				</div>
 			</div>
 			<div class='col s6'>
@@ -662,11 +623,20 @@
 						</tr>
 						<tr>
 							<td>@API</td>
-							<td>5</td>
-							<td>1</td>
+							<td>6</td>
+							<td>0</td>
 							<td>0</td>
 							<td>
-									83.333%
+									100%
+							</td>
+						</tr>
+						<tr>
+							<td>@Error</td>
+							<td>1</td>
+							<td>0</td>
+							<td>0</td>
+							<td>
+									100%
 							</td>
 						</tr>
 					</table>
@@ -682,31 +652,31 @@
 
 		<script>
 			var statusGroup = {
-				passParent: 0,
-				failParent: 1,
+				passParent: 1,
+				failParent: 0,
 				fatalParent: 0,
 				errorParent: 0,
 				warningParent: 0,
 				skipParent: 0,
-				exceptionsParent: 1,
+				exceptionsParent: 0,
 				
-				passChild: 5,
-				failChild: 1,
+				passChild: 6,
+				failChild: 0,
 				fatalChild: 0,
 				errorChild: 0,
 				warningChild: 0,
 				skipChild: 0,
 				infoChild: 0,
-				exceptionsChild: 1,
+				exceptionsChild: 0,
 				
-				passGrandChild: 16,
-				failGrandChild: 1,
+				passGrandChild: 18,
+				failGrandChild: 0,
 				fatalGrandChild: 0,
 				errorGrandChild: 0,
 				warningGrandChild: 0,
-				skipGrandChild: 1,
+				skipGrandChild: 0,
 				infoGrandChild: 0,
-				exceptionsGrandChild: 2,
+				exceptionsGrandChild: 0,
 			};
 		</script>
 		

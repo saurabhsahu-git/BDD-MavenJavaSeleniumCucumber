@@ -70,15 +70,7 @@ public class RestAssuredDefinition {
 	
 	@When("^Hitting GET Single User API$")
 	public void hitting_GET_Single_User_API() throws Throwable {
-	    // Write code here that turns the phrase above into concrete actions
-		System.out.println("Debug : "+baseURI()+"/users/2");
-		request=RestAssured.given();
-		request.headers("Content-Type","application/json");
-		response=request.post(baseURI()+"/users/2");
-		//response=RestAssured.post(baseURI()+"/users/2");
-		System.out.println("BODY : "+response.asString());
-		System.out.println("CODE : "+response.getStatusCode());
-	    
+		response=RestAssured.get(baseURI()+"/users/2");
 	}
 
 	@When("^Hitting POST Register API$")
